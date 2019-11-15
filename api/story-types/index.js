@@ -1,4 +1,5 @@
 const express = require('express')
+const characters = require('./characters')
 const router = express.Router()
 
 const storyTypes = {
@@ -7,7 +8,8 @@ const storyTypes = {
   ]  
 }
 
-router.get('/story-types', (req, res) => res.json(storyTypes) )
+router.get('/', (req, res) => res.json(storyTypes) )
+router.use(characters);
 
 module.exports = router
 
