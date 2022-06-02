@@ -4,6 +4,6 @@ const port = process.env.PORT || 3000
 
 const storyTypes = require('./story-types')
 
-app.use(storyTypes);
+app.use('/story-types', storyTypes);
 
 app.listen(port, () => console.log(`Story maker api listening on port ${port}!`))
